@@ -1,0 +1,66 @@
+write a program to store odd numbers in an array btw n and m
+#include <stdio.h>
+
+int main()
+{
+    int n,m;
+    scanf("%d %d",&n,&m);
+    int size;
+    int arr[100];
+    
+    for(int i=n;i<=m;i++){
+        if(i%2!=0){
+            arr[size]=i;
+            size++;
+        }
+    }
+    printf("array elemets are:");
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+
+    return 0;
+}
+
+
+
+
+
+2)
+#include <stdio.h>
+int changeValue(int [],int);
+void disp(int [],int);
+
+
+int main()
+{
+    int arr[]={1,2,3,4,5};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    printf("values before modification\n");
+    disp(arr,size);
+    changeValue(arr,size);
+    printf("values after modification\n");
+    disp(arr,size);
+
+    return 0;
+}
+
+
+void disp(int arr[],int size){
+    int i;
+    for(i=0;i<size;i++)
+        printf("%d ",arr[i]);
+    printf("\n");
+}
+
+int changeValue(int arr[],int size){
+    for(int i=0;i<size;i++){
+        if(arr[i]==3){
+            arr[i]=9;
+            printf("%d",arr[i]);
+        }
+        else
+            printf("%d",arr[i]);
+    }
+    
+}

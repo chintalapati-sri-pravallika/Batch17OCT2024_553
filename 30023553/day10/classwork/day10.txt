@@ -1,0 +1,39 @@
+DAY-10 (7-11)
+	Recursive function
+	Pointers
+•	pointers hold the address not to a value, points to a particular address
+•	syntax: datatype *pointer name;
+eg: int *ptr ---- ptr is a pointer that is pointing to the integer datatype
+•	pointer doesn’t belong to any datatype
+•	types of pointer:
+	NULL pointer – pointer pointing to nothing but NULL
+Eg: int *ptr= NULL
+	Void pointer/ generic pointer – it can hold address of any datatype
+Eg: void *ptr
+	Wild pointer – pointer without initialization
+It should not be the case every pointer should be initialized otherwise it can point to anything
+	Dangling situation – pointer pointing to a address where in the address reference is lost
+Static key word declaration to overcome dangling situation
+•	Every pointer has a same size that is 4/8 bytes depending on the bitness of the system  
+•	it is difficult for a void pointer to dereference, so we explicitly typecast it. Only generic pointers require typecasting
+•	refer notes about pointers
+•	rules of pointer:
+	&* ---- will nullify each other
+	Operand[] -> *operand similarly *op -> op[]
+Eg: ptr = &b[0];
+       ptr = &*(b+0);
+       ptr = (b+0) -> b;
+•	int *ptr=NULL;
+*ptr=101;
+ printf("value stored at ptr: %d\n",*ptr);
+gives Segmentation fault because we did not give correct address
+•	when a member of a structure is a pointer which is pointing to itself is called self-referencing pointer
+
+	storage classes:
+•	static - the variable will be there throughout the program (till the end)
+•	extern - 
+•	auto – local variable declaration (block scope)
+•	register – variable stored in cpu
+time taken to access the variable stored in register is faster than variable stored in stack frame
+
+•	malloc and calloc have same characteristics except malloc has one argument, and calloc has two

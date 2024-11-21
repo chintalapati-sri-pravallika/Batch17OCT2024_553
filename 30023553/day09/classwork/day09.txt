@@ -1,0 +1,42 @@
+DAY-9 (6-11)
+•	For loop being an entry-controlled loop change to exit controlled loop (m1.c)
+	Goto command
+•	Syntax: label name:          ----- declaration
+Sts;
+
+             goto label name;   -----calling
+•	Label should be declared from start of the line i.e root
+	Arrays
+•	Arrays are homogeneous which can contain only similar data type of elements
+•	Basic syntax: datatype array name[size];
+                       Eg: int arr[10];
+		      int b[2] = {1,2} ---- initialized array
+•	Index values of arrays should always be a whole number but not float
+•	To calculate the size of an array=sizeof(arr)/sizeof(arr[0])
+•	y array indexing starts with 0
+•	formula for accessing  array content :  [base address +(index value * size of data type)]
+•	types of arrays:
+1.	static array: the size of array is allocated before to the compilation time
+defined in stack segment
+eg: int arr[5];
+2.	dynamic array: the size of array is allocated at run time
+defined in heap segment
+eg: defined using malloc, calloc, realloc ---- stdlib.h
+3.	stretchable array: size of the array is increased or decreased on the need for dynamic array
+malloc, calloc, realloc
+4.	mutable array: size of the array is allocated at the time of linking and before execution
+	2D array:
+•	datatype array name[row][col]
+	array rule
+•	arr[2] is equal to 2[arr]
+•	arr[arr[2]] is also possible
+•	arr[2.5] imples arr[2], arr[10.9] imples arr[10]
+
+	Functions: 
+•	Functions are two types:
+1.	Std library function:
+Printf, sqrt, abs, pow
+2.	User defined: user is defining their own task to be performed
+•	Void disp() function without input args without return datatype
+int add(int, int) function with input args with return datatype
+void changename(char*) function with input args without return datatype

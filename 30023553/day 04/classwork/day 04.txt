@@ -1,0 +1,26 @@
+DAY 04 (25-10)
+
+LINUX TOOLS
+
+	GCC – C compiler
+•	-wall to address all the warnings.
+•	w --- warning
+•	Debugging options usually use -g and there are other options. 
+•	-pthread used as a preprocessor options usually.
+•	-I to include directory.
+
+ Commands:
+-E preprocessed state
+-c compile only 
+-s preprocessed state to assembly file
+-o assembly to object file
+-I to include directory
+-m to enter a message
+-l to include libraries
+Cd – to come to the root directory
+Cd .. – to move to the previous directory
+tree – to get tree structure of directory.
+Command to get intermediate files(.s,.o,.): -save-temps (temporary all the files to be saved)
+*---Remove all eg: - rm ./bin/*(removes all the files from bin directory)
+Cd ../src – to change into parent directory and then to the required directory.
+Cp -rf source destination --- to copy file/directory from source to destination

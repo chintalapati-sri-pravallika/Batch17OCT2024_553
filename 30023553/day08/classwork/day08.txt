@@ -1,0 +1,37 @@
+DAY-8 (5-11)
+	else if ladder
+•	it tries to check all the if else if conditions unless the condition satisfies or then goes to else condition, so it takes time.
+•	if condition holds strings, float values we use else if ladder
+•	can test relational conditions
+	switch – to check single characters, ascii, integer conditions 
+•	switch(cond)
+{
+case ‘1’:
+	…
+	break;
+case ‘2’:
+	…
+	break;
+default:
+	…
+	break; - it is not mandatory because this is the final label
+}
+•	should not have duplicate cases in switch
+i.	case 66:			
+case ‘B’:
+ii.	case ‘B’:		
+case ‘B’:
+gives an error as duplicate cases are not allowed
+	looping: do while, while, for
+•	initialization
+condition check
+statements to be executed
+counter
+•	two types of loops: entry controlled (while, for loop), exit controlled (do while)
+•	do {
+sts
+} while(cond);
+•	;(semi colon) is used after while condition in do while because
+•	For(initialization section ;condition section ;counter section){}
+•	Initializing and counter we can use more than one variable in for loop so it is powerful than while loop
+•	We can vomit one or more section in for loop

@@ -1,0 +1,77 @@
+1)recursive function
+#include <stdio.h>
+
+int f(int);
+int main()
+{
+    int res = f(5);
+    printf("res = %d \n",res);
+    return 0;
+
+}
+
+int f(int v){
+    if(v==0)
+        return 1;
+    v--;
+    f(v);
+    printf("val of v in func is %d\n",v);
+    return v;
+}
+
+output:
+val of v in func is 0
+val of v in func is 1
+val of v in func is 2
+val of v in func is 3
+val of v in func is 4
+res = 4
+
+
+2)
+#include <stdio.h>
+#include<stdlib.h>
+
+int main() {
+    // Write C code here
+   int a=10;
+   int *ptr=NULL;
+   ptr=&a;
+    printf("value stored at ptr:%d\n",*ptr);
+    *ptr=101;
+    printf("value stored at ptr: %d\n",*ptr);
+    printf("value of a:%d",a);
+    return 0;
+}
+output:
+value stored at ptr:10
+value stored at ptr: 101
+value of a:101
+
+
+3)write a program to search a element in the array
+
+
+4)undersating static variable
+#include <stdio.h>
+
+int *allocMem();
+
+int main() {
+    // Write C code here
+    int a=10;
+    int *ptr=NULL;
+    ptr=allocMem();
+    printf("\n%d\n",*ptr);
+
+    return 0;
+}
+
+int *allocMem(){
+    static int a=10;
+    return &a;
+}
+ o/p:10
+
+
+5)

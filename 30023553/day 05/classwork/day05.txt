@@ -1,0 +1,52 @@
+DAY 05 (28-10) 
+Compiling the code without using make command
+Mkdir mainprj
+Cd mainprj
+Mainprj>mkdir inc obj
+
+ Created header file
+Cd inc
+Mainprj/inc/>vi calc.h
+
+cd../
+cd src
+mainprj/src/> vi calc.c
+mainprj/src/> vi main.c
+
+cd ../
+mainprj/>gcc -c ./src/calc.c -I./inc/ -o ./obj/calc.o
+mainprj/>gcc -c ./src/main.c -I./inc/ -o ./obj/main.o
+
+ 	Errors 
+•	implicit declaration: this error occurs when we used the interface, but interface not declared.
+•	Segmentation fault (core dumped): trying to assess address beyond the scope. 
+•	Stack smashing detected: 
+•	Exited normally: 
+•	Invalid use of void expression – it is difficult for a void pointer to dereference so we explicitly typecast it 
+•	Double free detected (aborted (core dumped)) – 
+
+ 	To copy files/directories from one repository to another repository
+•	First clone to the repository from which files are to be copied (sir’s github repository: -git clone https://github.com/bhimatak/CGBatch17Oct2024.git)
+
+
+	Make file: It will search/fetch for only source files which are latest modified and compiles accordingly.
+•	To create makefile : - vi Makefile --- to create makefile 
+•	Make -f ./scripts/Makefile --- to run a makefile written in the shell language
+
+
+	Code coverage tool (gcov): we get to know the no.of lines executed in a given code
+•	To check the coverage of the program lines:
+•	gcc -fprofile-arcs -ftest-coverage file1.c file2.c …….
+•	After compiling  above command we get file.gcno (this file contains binary data)
+•	After executing (./a.out) we get file.gcda (it is again a binary file)
+•	gcov file.c ---- to get the percentage of the code executed and is useful in unit test case  
+
+	git hub:
+•	Create and clone the github repository, git clone https:….  --- command to clone the repository
+•	Create a directory using repository in command prompt
+•	git add . --- to add all the edited files into the local repository, git add filename --- to add specified file into the local repository.
+•	 git commit -m “  “ --- to pass a message and commit the changes
+•	git push origin main ---  to push the local added files to the github
+
+	splint: it does static analysis of source code. To check memory leakages 
+•	check for bugs
