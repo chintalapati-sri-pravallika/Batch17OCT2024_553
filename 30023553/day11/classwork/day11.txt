@@ -1,0 +1,57 @@
+DAY-11 (8-11)
+	strings: collection of characters ends with NULL character (\0)
+•	while declaring the string one extra length should be declared for the NULL character
+eg: types of declaration with initialization
+      char Name[6] = {‘h’,’e’,’l’,’l’,’o’,’\0’};
+      char Name[6] = “hello”;
+      char greet[ ] = “how are you”;
+      char[21];  ---- without initialization
+•	collection of characters is different from string
+•	2d array of characters:
+char Name[ ][20]={“Pravallika”,”pravi”,”sri”} // the compiler can understand rows as 3
+char Name[5][20] // there are 5 names each should have 20 characters 
+
+	String functions: header file #include<string.h>
+•	strcpy,strncpy – to copy string from source to destination
+•	strcat,strncat – to concat two strings
+Size of destination should be greather than source
+•	strcmp – comparing two strings
+	It will check character by character by checking ASCII value
+	If str1 is greater than str2 it returns positive value. If str1 is lesser than str2 it returns negative value. If str1 is equal to str2 it returns zero
+•	strtok – delimiter is used
+•	strlen – gives length of string excluding the NULL character
+•	strerror – captures string handling errors 
+•	strstr – to find the first occurrence of the substring in the main string 
+•	strchr, strrchr – gives the address of the character occurance
+strstr, strcat, strtok (p4)
+why ; is used in structures 
+	UDT: user defined datatype – to define multiple of its types
+•	Bunching data types
+	Structures:
+•	Syntax: struct tagname
+              {
+                     members of structure;
+               };
+•	Eg:          struct square
+              {
+                     int length;
+                     int breadth;
+               }s3,s4;  ---- s3,s4 are structure(square) variables
+               struct square s1,s2; ---- s1,s2 are also structure(square) variables
+we can declare variables in either way
+•	We can declare array of structures
+•	To declare structure in function void func(struct square s1)
+	If we use typedef to the structure name like eg: typedef struct square SQR we can replace it from writing whole thing 
+	struct square s1,s2,s3 -> SQR s1,s2,s3 (when defined typedef)
+•	typedef struct square
+{
+            int length;
+            int breadth;
+                          }SQR1;  
+•	. is used when variables of structure are static
+-> is used when variables of structure are pointers
+•	In C we can’t define a function in structure 
+•	To avoid structure padding it is better to define all the numeric constants at one place (either in the beginning or end) and string constants at one place (either in the beginning or end)
+Error: free (): invalid pointer
+           Aborted code dumped
+•	As we are moving the pointer to print the desired set and clearing the pointed pointer but not clearing the base address 

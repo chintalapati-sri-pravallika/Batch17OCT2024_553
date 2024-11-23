@@ -1,0 +1,53 @@
+DAY-13 (12-11)
+	Union - The members of the union can be accessed one at a time.
+•	It is almost same as structure accept this one property
+•	Union has the size of the data type which has greater size
+•	Eg : union item{
+int m;
+float x;
+char c;
+};
+			
+2000                        2001                        2002                       2003
+char c
+int m
+float x
+the size of the union in this example is 4 bytes
+	Enum (enumeration) – 
+                                                             
+
+
+
+                                                                File handling
+•	File is collection of logically related information
+•	Two types:
+1)	Sequential file
+2)	Random access file
+•	Use special structure named FILE
+•	FILE *fp; – file pointer
+•	FILE *fopen(char *name,char *mode) – to open a file
+name of the file, mode you want use in the file - are arguments given to the fopen (mode can be read,write,append)
+•	Once file is opened it returns the file address to file pointer
+•	/*
+	FILE => DS
+	fp => file pointer to FILE DS
+
+	fopen("name of the file","mode") => opening the file
+	mode => r,w,a,r+,w+,a+
+
+	fclose(fp) => close the opened file
+
+	read/write
+	fprintf,fscanf => formated writing and reading resp
+	fputs,fgets => unformated i/o operation
+	fwrite/fread => reading/writing binary objects
+ 
+*/
+•	By using system, we can’t use linux commands
+•	fseek
+•	fread();
+	fread (
+	fread returns the size of how may no of bytes it is read
+•	fwrite ();/
+	fread (
+	fwrite returns the size of how may no of bytes it is written

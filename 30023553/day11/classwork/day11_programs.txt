@@ -1,0 +1,134 @@
+1)
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char name[5];
+    int i;
+    for(i=0;i<5;i++){
+        scanf("%c",&name[i]);
+    }
+    for(i=0;i<5;i++){
+        printf("\n%c=%d",name[i],name[i]);
+    }
+
+    return 0;
+}
+input:
+pravi
+output:
+p=112
+r=114
+a=97
+v=118
+i=105
+
+2)str comaparision
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int main() {
+    // Write C code here
+    char s1[20],s2[20];
+    char d1[40],d2[40];
+    int ret=0;
+    char *ptr = NULL;
+    
+    scanf("%s%s",s1,s2);
+    printf("s1=%s and s2=%s\n",s1,s2);
+    //ptr=(char *)malloc(strlen(s1)+1);
+    
+    /*ret = strcmp(s1,s2); //string comparision
+    printf("%d",ret);*/
+    
+    ptr=strcpy(d1,s1);   //string copy
+    printf("d1 = %s\n",d1);
+    printf("copied string = %s\n",ptr);
+    printf("address of d1 = %u and address of ptr = %u",&d1[0],ptr);
+
+    return 0;
+}
+input: pravi pravallika
+output
+s1=pravi and s2=pravallika
+d1 = pravi
+copied string = pravi
+address of d1 = 2401103696 and address of ptr = 2401103696
+
+3)strtok function
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s1[400],s2[20];
+    char *ptr = NULL;
+    printf("enter the string with delimite:");
+    scanf("%[^\n]s",s1);
+    
+    ptr=strtok(s1," ");
+    printf("ptr=%s\n",ptr);
+    return 0;
+}
+input:enter the string with delimite:hii,hello i am pravi
+output:ptr=hii,hello
+
+4)reverse a given string
+5)reverse given iterval of the string
+
+6)structures
+#include <stdio.h>
+#include<string.h>
+
+struct Employee{
+    char eName[20];
+    char eGender;
+    char eAddress[20];
+    int eId;
+    float eSal;
+};
+
+typedef struct Employee EMP;
+
+int main() {
+    EMP e1;
+    EMP e[3];
+    int i;
+    
+    e1.eId=101;
+    e1.eSal=10000.123;
+    strcpy(e1.eName,"pravi");
+    strcpy(e1.eAddress,"VSKP");
+    e1.eGender='F';
+    
+    printf("\nEmployee details are\n");
+    printf("ID:%d\n",e1.eId);
+    printf("Name:%s\n",e1.eName);
+    printf("salary:%f\n",e1.eSal);
+    printf("address:%s\n",e1.eAddress);
+    printf("gender:%c\n",e1.eGender);
+    
+    printf("\nEmployee details are\n");
+    for(i=0;i<3;i++){
+        printf("\nname:");
+        scanf("%s",e[i].eName);
+        printf("\nID:");
+        scanf("%d",&e[i].eId);
+        printf("\nGender:");
+        scanf(" ");
+        scanf("%c",&e[i].eGender);
+        printf("\naddress:");
+        scanf("%s",e[i].eAddress);
+        printf("\nsalary:");
+        scanf("%f",&e[i].eSal);
+    }
+    
+    printf("\nEmployee details are\n");
+    for(i=0;i<3;i++){
+    printf("ID:%d\n",e[i].eId);
+    printf("Name:%s\n",e[i].eName);
+    printf("salary:%f\n",e[i].eSal);
+    printf("address:%s\n",e[i].eAddress);
+    printf("gender:%c\n",e[i].eGender);
+    }
+    return 0;
+}
