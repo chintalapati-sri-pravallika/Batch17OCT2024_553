@@ -1,0 +1,15 @@
+DAY-14 (14-11)
+	Multi-threading: 
+•	Lwt/lwp – light weight thread or light weight process
+•	Thread – 
+•	Process – 
+•	Concurrency – to perform multiple task(functions) simultaneously
+•	Concurrency in programming:
+-	Multithreading: multiple threads within a single process are created to perform different parts of task or handle multiple tasks concurrently.
+	threads share the same memory space – leads to race condition (to avoid race condition we need to use lock).
+-	Multiprocessing: separate processes are created to handle different tasks concurrently
+	Each process has own memory space
+	Requires inter process communication (IPC) methods like pipes or shared memory 
+-	Asynchronous programming: non-blocking functions are used to handle tasks such as I/O operations without blocking the main thread, 
+•	Concurrency is about dealing with multiple tasks at once or having multiple threads
+Parallelism is executing multiple tasks truly simultaneously, achieved by having multiple CPU cores.
